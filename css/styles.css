@@ -1,0 +1,265 @@
+/* CSS Reset  */
+/* Se usa para tener control todal del diseño */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* variable globales */
+  --color-primario: #2c3e50;
+  --color-secundario: #3498db;
+  --color-fondo: #f6f6f6;
+  --color-texto: #333;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+
+  background: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  font-weight: bold;
+  color: var(--color-primario);
+}
+
+nav a:hover {
+  color: var(--color-secundario);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+#inicio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+#inicio img {
+  width: 220px;
+  border-radius: 25%;
+  border: 4px solid #940094;
+}
+.skills {
+  display: flex;
+  gap: 80px;
+  margin-top: 50px;
+}
+
+.skill i {
+  font-size: 60px;
+}
+
+#sobre p {
+  max-width: 700px;
+
+  margin: 20px auto;
+  line-height: 1.8;
+  font-size: 18px;
+  color: #444;
+}
+
+#sobre {
+  text-align: center;
+  padding: 60px 20px;
+  background: #6f8593;
+  border-radius: 10px;
+}
+
+#sobre h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+footer {
+  text-align: center;
+}
+
+footer a {
+  margin: 0 15px;
+}
+footer i {
+  font-size: 25px;
+  padding: 20px;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+footer a:hover i {
+  transform: scale(1.2);
+}
+
+.fa-instagram:hover {
+  color: #e4405f;
+}
+
+.fa-linkedin:hover {
+  color: #0a66c2;
+}
+.devicon-github-original:hover {
+  transform: scale(1.2);
+}
+
+.fa-envelope:hover {
+  color: #ea4335;
+}
+
+#img-perfil {
+  transition: transform 0.3s ease;
+}
+
+#img-perfil:hover {
+  transform: scale(1.08);
+}
+
+#inicio {
+  animation: moverCarrusel 8s infinite;
+}
+
+#contacto form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+#contacto label {
+  font-weight: 600;
+  color: #333;
+  margin-top: 10px;
+}
+
+#contacto input,
+#contacto textarea {
+  padding: 10px;
+  border: 1px solid #181616;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+}
+
+#contacto input:focus,
+#contacto textarea:focus {
+  border-color: #940094;
+  box-shadow: 0 0 80px rgba(96, 206, 231, 0.3);
+}
+
+#contacto textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+#contacto button {
+  margin-top: 10px;
+  padding: 12px;
+  background: #4f7179;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#contacto button:hover {
+  background: #3f5c63;
+  transform: translateY(-2px);
+}
+#contacto h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.img-proyectos{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+#contenedor-proyectos{
+    margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(510px, 1fr));
+  gap: 30px;
+}
+
+#proyectos h3{
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: var(--color-primario);
+}
+
+#proyectos p{
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+#proyectos a{
+  display: inline-block;
+  padding: 8px 14px;
+  background: #940094;
+  color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#proyectos a:hover{
+     background: #217dbb;
+  transform: translateY(-2px);
+}
+
+
+
+@keyframes moverCarrusel {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
